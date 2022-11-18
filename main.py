@@ -16,7 +16,6 @@ operating_systems = [OperatingSystem.WINDOWS.value, OperatingSystem.LINUX.value]
 user_agent_rotator = UserAgent(software_names=software_names, operating_systems=operating_systems, limit=100)
 user_agent = user_agent_rotator.get_random_user_agent()
 
-
 @retry(ConnectionError, tries=10, delay=10)
 def check():
     headers = {
