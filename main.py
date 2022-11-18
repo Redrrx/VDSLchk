@@ -45,7 +45,7 @@ def check():
     except requests.exceptions.ConnectionError:
         print(f'[!] Connection error retrying shortly ')
     except requests.exceptions.HTTPError:
-        print(f'[!] Rate limited or the website is down for maintenance, the the program will halt now')
+        print(f'[!] Rate limited or the website is down for maintenance, the program will halt now')
         input()
 
     if 'desole' not in response.json()['type']:
