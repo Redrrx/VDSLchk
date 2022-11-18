@@ -11,6 +11,12 @@ from retry import retry
 config = configparser.ConfigParser()
 config.read('cfg.ini')
 telefono = config['main']['telefono']
+if len(telefono) != 9:
+    print('[!!!] Halting, error in cfg, the provided phone number is either too short or longer than needed.')
+    input()
+    quit()
+
+
 software_names = [SoftwareName.CHROME.value]
 operating_systems = [OperatingSystem.WINDOWS.value, OperatingSystem.LINUX.value]
 user_agent_rotator = UserAgent(software_names=software_names, operating_systems=operating_systems, limit=100)
