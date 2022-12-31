@@ -8,4 +8,4 @@ This script has no POC as the backend of the company could be malfunctioning or 
 
 ## Legal ##
 
-The development of this script was made soley for the purpose of education only.
+The development of this script was made solely for the purpose of education only.
